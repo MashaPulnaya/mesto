@@ -1,0 +1,7 @@
+.profile__adit-button{
+width: 24px;
+height: 24px;
+background: transparent url('./../../../images/editbutton.png') center no-repeat;
+background-size: 10px 10px;
+margin-top: 35px;
+}
