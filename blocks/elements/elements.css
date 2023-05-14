@@ -7,3 +7,15 @@
     padding-bottom: 68px;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1200px) {
+    .elements {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 497px) {
+    .elements {
+        padding-bottom: 48px;
+    }
+}
