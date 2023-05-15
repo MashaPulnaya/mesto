@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Путешествия по России</title>
     <link rel="stylesheet" href="./pages/index.css">
+    <script src="./index.js" defer></script>
 </head>
 
 <body class="page">
@@ -25,6 +26,15 @@
 </div>
 <p class="profile__subtitle">Исследователь океана</p>
     </div>
+    <div id="edit-popup" class="popup">
+        <div class="popup__content">
+          <form id="edit-form" class="popup__form">
+            <h2 class="title">Редактировать профиль</h2>
+            <input id="name-input" type="text" class="input" />
+            <button type="submit" class="button">Сохранить</button>
+          </form>
+          <button id="close-popup-button" class="popup__close-button"></button>
+        </div>
     <button class="profile__add-button"></button>
 </section>
 <section class="elements">
