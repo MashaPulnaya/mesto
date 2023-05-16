@@ -7,28 +7,28 @@ const profileSubtitle = document.querySelector('.profile__subtitle');
 const professionInput = document.querySelector('#profession-input');
 const editForm = document.querySelector('#edit-form');
 
-openPopupButton.addEventListener('click', function() {
+openPopupButton.addEventListener('click', function () {
     openPopup(editPopup);
 });
 
-closePopupButton.addEventListener('click', function() {
+closePopupButton.addEventListener('click', function () {
     closePopup(editPopup);
 });
 
 nameInput.value = profileTitle.textContent;
 professionInput.value = profileSubtitle.textContent;
 
-editForm.addEventListener('submit', function(event) {
-event.preventDefault();
+editForm.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-profileTitle.textContent = nameInput.value;
-profileSubtitle.textContent = professionInput.value;
+    profileTitle.textContent = nameInput.value;
+    profileSubtitle.textContent = professionInput.value;
 
-closePopup(editPopup);
+    closePopup(editPopup);
 });
 
 function openPopup(popup) {
-  popup.classList.add('popup_is-opened');
+    popup.classList.add('popup_is-opened');
 }
 
 function closePopup(popup) {

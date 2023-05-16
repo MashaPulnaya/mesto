@@ -6,7 +6,7 @@
       center no-repeat;
     background-size: 32px 32px;
     position: absolute;
-    top: -30px;
+    top: -40px;
     right: -40px;
     border: 0;
     padding: 0;
@@ -22,5 +22,7 @@
     .popup__close-button {
         width: 20px;
         height: 20px;
+        top: -30px;
+        right: 0px;
     }
 }

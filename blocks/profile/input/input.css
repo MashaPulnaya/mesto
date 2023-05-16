@@ -1,11 +1,18 @@
 .input {
-    padding: 10px 20px;
     box-sizing: border-box;
     font-size: inherit;
-    padding: 10px 20px;
+    margin-top: 23px;
     box-sizing: inherit;
     font-size: inherit;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
+
+  @media screen and (max-width: 497px) {
+    .input {
+      margin-top: 40px;
+    }
+}
+
+
 

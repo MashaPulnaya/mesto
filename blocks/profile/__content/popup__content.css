@@ -2,4 +2,13 @@
     background-color: #fff;
     border-radius: 10px;
     position: relative;
+    margin-top: -126px;
   }
+
+  @media screen and (max-width: 550px) {
+    .popup__content {
+      margin-top: -82px;
+    }
+}
+
+ 
