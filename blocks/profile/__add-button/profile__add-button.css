@@ -4,7 +4,19 @@
     background: transparent url('./../../../images/addbutton.png') center no-repeat;
     background-size: 22px 22px;
     margin-top: 30px;
-    }
+    transition: all 0.2s;
+    cursor: pointer;
+}
+  
+  .profile__add-button:hover {
+   opacity: 60%;
+    transition: all 0.2s;
+  }
+  
+  .profile__add-button:active {
+    opacity: 60%;
+    transition: all 0.2s;
+  }
 
     @media screen and (max-width: 497px) {
         .profile__add-button {
