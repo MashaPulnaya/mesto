@@ -8,19 +8,19 @@
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
     .header__line {
         max-width: 600px;
     }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 650px) {
     .header__line {
         max-width: 400px;
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 450px) {
     .header__line {
         max-width: 300px;
     }
