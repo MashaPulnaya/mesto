@@ -5,14 +5,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 30px 40px;
+    padding: 30px 35px;
     box-sizing: border-box;
   }
 
   @media screen and (max-width: 550px) {
     .popup__form {
         max-width: 282px;
-        max-height: 322px;
+        min-height: 0;
+        height: 323px;
         padding-top: 30px;
         padding-bottom: 30px;
         padding-left: 23px;
