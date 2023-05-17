@@ -7,27 +7,27 @@
     transition: all 0.2s;
     cursor: pointer;
 }
-  
-  .profile__add-button:hover {
-   opacity: 60%;
-    transition: all 0.2s;
-  }
-  
-  .profile__add-button:active {
+
+.profile__add-button:hover {
     opacity: 60%;
     transition: all 0.2s;
-  }
+}
 
-    @media screen and (max-width: 497px) {
-        .profile__add-button {
-            margin: auto;
-        }
-    }
+.profile__add-button:active {
+    opacity: 60%;
+    transition: all 0.2s;
+}
 
-    @media screen and (max-width: 325px) {
-        .profile__add-button {
-            width: 282px;
-            height: 50px;
-            background-size: 16px 16px;
-        }
+@media screen and (max-width: 497px) {
+    .profile__add-button {
+        margin: auto;
     }
+}
+
+@media screen and (max-width: 325px) {
+    .profile__add-button {
+        width: 282px;
+        height: 50px;
+        background-size: 16px 16px;
+    }
+}
