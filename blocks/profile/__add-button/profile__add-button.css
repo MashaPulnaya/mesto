@@ -1,8 +1,10 @@
 .profile__add-button {
     width: 150px;
     height: 50px;
-    background: transparent url('./../../../images/addbutton.png') center no-repeat;
+    background: transparent url('./../../../images/addbutton.svg') center no-repeat;
     background-size: 22px 22px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 2px;
     margin-top: 30px;
     transition: all 0.2s;
     cursor: pointer;

@@ -1,4 +1,4 @@
-.button {
+.popup__button {
   font-family: 'Inter', 'Arial', 'Helvetica';
   font-weight: 400;
   font-size: 18px;
@@ -14,27 +14,27 @@
   border-radius: 2px;
   transition: all 0.2s;
   cursor: pointer;
-  margin-top: 35px;
+  margin-top: 38px;
 }
 
-.button:hover {
+.popup__button:hover {
   opacity: 80%;
   transition: all 0.2s;
 }
 
-.button:active {
+.popup__button:active {
   background-color: rgba(0, 0, 0, 1);
   transition: all 0.2s;
 }
 
 @media screen and (max-width: 325px) {
-  .button {
-    padding-left: 82px;
+  .popup__button {
+    padding-left: 84px;
     padding-right: 156px;
     padding-top: 14px;
     padding-bottom: 14px;
     font-size: 14px;
     line-height: 17px;
-    margin-top: 33px;
+    margin-top: 31px;
   }
 }

@@ -6,6 +6,9 @@
     color: #FFFFFF;
     margin: 0;
     padding-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 497px) {
@@ -17,7 +20,7 @@
 @media screen and (max-width: 320px) {
     .profile__subtitle {
         font-size: 14px;
-        line-height: 18px;
+        line-height: 17px;
         text-align: center;
         padding-top: 8px;
     }

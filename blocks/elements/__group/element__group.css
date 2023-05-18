@@ -8,11 +8,10 @@
   }
   
   .element__group:hover {
-    opacity: 80%;
-    transition: all 0.2s;
+    opacity: 50%;
   }
   
   .element__group:active {
-    background: url('./../../../images/blackgroup.png') center no-repeat;
-    transition: all 0.2s;
+    background: url('./../../../images/blackgroup.svg') center no-repeat;
+    opacity: 100%;
   }
