@@ -10,7 +10,7 @@
     bottom: 0;
   }
   
-  .popup_is-opened {
+  .popup_opened {
     display: flex;
   }
   
