@@ -3,17 +3,13 @@
     display: flex;
     margin: auto;
     padding-bottom: 50px;
+    padding-top: 43px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 670px) {
     .profile {
         display: grid;
         justify-content: center;
-    }
-}
-
-@media screen and (max-width: 325px) {
-    .profile {
         padding-bottom: 38px;
     }
 }

@@ -4,21 +4,25 @@
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
-  margin-top: 28px;
+  margin-top: 14px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
 }
 
 .popup__input:last-of-type {
-  margin-top: 15px;
+  margin-top: 10px;
+  padding-bottom: 8px;
 }
 
 @media screen and (max-width: 497px) {
   .popup__input {
-    margin-top: 55px;
+    margin-top: 42px;
+    padding-bottom: 9px;
+    width: 238px;
   }
 
   .popup__input:last-of-type {
-    margin-top: 19px;
+    margin-top: 10px;
   }
 }

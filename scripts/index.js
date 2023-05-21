@@ -7,17 +7,18 @@ const profileSubtitle = document.querySelector('.profile__subtitle');
 const professionInput = document.querySelector('.popup__input_type_job');
 const editForm = document.querySelector('.popup__form');
 
-nameInput.value = profileTitle.textContent;
 
 openPopupButton.addEventListener('click', function () {
     openPopup(editPopup);
 });
 
+nameInput.value = profileTitle.textContent;
+professionInput.value = profileSubtitle.textContent;
+
 closePopupButton.addEventListener('click', function () {
     closePopup(editPopup);
 });
 
-professionInput.value = profileSubtitle.textContent;
 
 editForm.addEventListener('submit', function (event) {
     event.preventDefault();

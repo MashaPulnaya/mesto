@@ -2,7 +2,8 @@
         max-width: 880px;
         margin: auto;
         padding-top: 45px;
-        padding-bottom: 40px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(84, 84, 84, 1);
 }
 
 @media screen and (max-width: 900px) {
@@ -20,8 +21,9 @@
 
 @media screen and (max-width: 500px) {
         .header {
-                max-width: 300px;
+                max-width: 319px;
                 padding-top: 28px;
-                padding-bottom: 46px;
+                padding-bottom: 2px;
+
         }
 }

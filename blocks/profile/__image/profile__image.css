@@ -4,7 +4,7 @@
     border-radius: 50%;
 }
 
-@media screen and (max-width: 497px) {
+@media screen and (max-width: 670px) {
     .profile__image {
         margin: auto;
     }

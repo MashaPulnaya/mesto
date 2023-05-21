@@ -14,7 +14,7 @@
   border-radius: 2px;
   transition: all 0.2s;
   cursor: pointer;
-  margin-top: 38px;
+  margin-top: 29px;
 }
 
 .popup__button:hover {
@@ -35,6 +35,6 @@
     padding-bottom: 14px;
     font-size: 14px;
     line-height: 17px;
-    margin-top: 31px;
+    margin-top: 26px;
   }
 }
