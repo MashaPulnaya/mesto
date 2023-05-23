@@ -12,9 +12,6 @@ openPopupButton.addEventListener('click', function () {
     openPopup(editPopup);
 });
 
-nameInput.value = profileTitle.textContent;
-professionInput.value = profileSubtitle.textContent;
-
 closePopupButton.addEventListener('click', function () {
     closePopup(editPopup);
 });
@@ -31,6 +28,8 @@ editForm.addEventListener('submit', function (event) {
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    nameInput.value = profileTitle.textContent;
+    professionInput.value = profileSubtitle.textContent;
 }
 
 function closePopup(popup) {

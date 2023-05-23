@@ -1,17 +1,18 @@
 .popup__form {
-    width: 100vw;
-    max-width: 430px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px 35px;
-    box-sizing: border-box;
-  }
+  width: 100vw;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 35px;
+  box-sizing: border-box;
+}
 
-  @media screen and (max-width: 550px) {
-    .popup__form {
-        max-width: 282px;
-        padding-left: 21px;
-        padding-right: 50px;
-    }
+@media screen and (max-width: 550px) {
+  .popup__form {
+    width: 238px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: content-box;
+  }
 }
