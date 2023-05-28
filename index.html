@@ -84,6 +84,26 @@
             <button type="button" class="popup__close-button"></button>
         </div>
     </div>
+    <div class="popup popup_card_image">
+            <div class="popup__container">
+                <h2 class="popup__title">Новое&nbsp;место</h2>
+                <form name="form2" class="popup__form popup__form_type_card">
+                    <input name="name-card" type="text" value="Название" class="popup__input popup__input_type_title" />
+                    <input name="name-image" type="text" value="Ссылка на картинку" class="popup__input popup__input_type_image" />
+                    <button type="submit" class="popup__button popup__button_type_card">Создать</button>
+                </form>
+                <button type="button" class="popup__close-button popup__close-button_card_image"></button>
+            </div>
+    </div>
+    <template class="card-template">
+        <article class="card element">
+            <img src="" class="card__image element__image" alt="">
+            <div class="card__conteiner element__conteiner">
+                <h2 class="card__title element__title"></h2>
+                <button type="button" class="card__group element__group"></button>
+            </div>
+        </article>
+    </template>
 </body>
 
 </html>
