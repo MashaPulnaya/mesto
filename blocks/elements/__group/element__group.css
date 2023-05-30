@@ -11,7 +11,4 @@
     opacity: 50%;
   }
   
-  .element__group:active {
-    background: url('./../../../images/blackgroup.svg') center no-repeat;
-    opacity: 100%;
-  }
+  

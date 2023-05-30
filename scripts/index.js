@@ -87,20 +87,27 @@ const initialCards = [
     }
 ];
 
-initialCards.forEach(function (cardItem) {
-    const newCard = createCard(cardItem)
+initialCards.forEach(function (item) {
+    const newCard = createCard(item.name, item.link);
     elements.prepend(newCard);
 });
 
-function createCard(values) {
+function createCard(name, link) {
     const newCard = card.cloneNode(true);
 
-    const text = newCard.querySelector('.card__title')
-    const image = newCard.querySelector('.card__image')
-    text.textContent = values.name;
-    image.src = values.link;
+    const text = newCard.querySelector('.card__title');
+    const image = newCard.querySelector('.card__image');
+    text.textContent = name;
+    image.src = link;
 
-    //добавить слушатели
+    const deleteButtom = newCard.querySelector('.element__del');
+    deleteButtom.addEventListener('click', function(event){
+        elements.removeChild(newCard);
+    }); 
+
+    newCard.querySelector('.element__group').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('element__group_active');
+    }); 
 
     return newCard;
 };
@@ -113,10 +120,13 @@ addForm.addEventListener('submit', function (event) {
     const formData = new FormData(form);
     const values = Object.fromEntries(formData);
 
-    const value = values['name-card'];
+    const valueСard = values['name-card'];
+    const valueImage = values['name-image'];
 
-    const newCard = createCard(value);
+    const newCard = createCard(valueСard, valueImage);
     elements.prepend(newCard);
 
-    form.resent();
+    form.reset();
+    closePopup(addPopup);
 });
+

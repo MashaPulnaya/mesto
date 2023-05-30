@@ -1,0 +1,4 @@
+.element__group_active {
+    background: url('./../../../../images/blackgroup.svg') center no-repeat;
+    opacity: 100%;
+  }
