@@ -105,7 +105,8 @@ function createCard(name, link) {
         elements.removeChild(newCard);
     }); 
 
-    newCard.querySelector('.element__group').addEventListener('click', function (evt) {
+    const likeButtom = newCard.querySelector('.element__group');
+    likeButtom.addEventListener('click', function (evt) {
         evt.target.classList.toggle('element__group_active');
     }); 
 
