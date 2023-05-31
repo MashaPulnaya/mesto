@@ -1,4 +1,4 @@
-.element__group {
+.card__group {
     min-width: 22px;
     min-height: 19px;
     background: url('./../../../images/group.svg') center no-repeat;
@@ -7,8 +7,6 @@
     cursor: pointer;
   }
   
-  .element__group:hover {
+  .card__group:hover {
     opacity: 50%;
   }
-  
-  

@@ -58,7 +58,6 @@ closePopupCardButton.addEventListener('click', function () {
 const template = document.querySelector('.card-template');
 const templateContent = template.content;
 const card = templateContent.querySelector('.card');
-const elements = document.querySelector('.elements');
 
 const initialCards = [
     {
@@ -89,7 +88,7 @@ const initialCards = [
 
 initialCards.forEach(function (item) {
     const newCard = createCard(item.name, item.link);
-    elements.prepend(newCard);
+    template.prepend(newCard);
 });
 
 function createCard(name, link) {
@@ -100,15 +99,21 @@ function createCard(name, link) {
     text.textContent = name;
     image.src = link;
 
-    const deleteButtom = newCard.querySelector('.element__del');
+    const deleteButtom = newCard.querySelector('.card__del');
     deleteButtom.addEventListener('click', function(event){
-        elements.removeChild(newCard);
+        template.removeChild(newCard);
     }); 
 
-    const likeButtom = newCard.querySelector('.element__group');
+    const likeButtom = newCard.querySelector('.card__group');
     likeButtom.addEventListener('click', function (evt) {
-        evt.target.classList.toggle('element__group_active');
+        evt.target.classList.toggle('card__group_active');
     }); 
+
+    image.addEventListener('click', function () {
+        openPopup(popupImage);
+        text.textContent = name;
+    image.src = link;
+    });
 
     return newCard;
 };
@@ -125,9 +130,31 @@ addForm.addEventListener('submit', function (event) {
     const valueImage = values['name-image'];
 
     const newCard = createCard(valueСard, valueImage);
-    elements.prepend(newCard);
+    template.prepend(newCard);
 
     form.reset();
     closePopup(addPopup);
 });
+
+////открытие фото
+
+const popupImage = document.querySelector('.popup-image');
+const popupImagePhoto = document.querySelector('.popup-image__photo');
+const popupImageCloseButton = document.querySelector('.popup-image__close-button');
+const popupImageForm = document.querySelector('.popup-image__form');
+
+
+
+popupImageCloseButton.addEventListener('click', function () {
+    closePopup(popupImage);
+});
+
+function openPopup(popup) {
+    popup.classList.add('popup-image_opened');
+}
+
+function closePopup(popup) {
+    popup.classList.remove('popup-image_opened');
+}
+
 

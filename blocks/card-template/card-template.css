@@ -1,4 +1,4 @@
-.elements {
+.card-template {
     max-width: 880px;
     display: flex;
     margin: auto;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .elements {
+    .card-template {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 497px) {
-    .elements {
+    .card-template {
         padding-bottom: 52px;
     }
 }
