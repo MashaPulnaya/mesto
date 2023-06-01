@@ -1,10 +1,7 @@
 .popup-image__form {
-    width: 100vw;
-    max-width: 430px;
+    max-width: 816px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px 35px;
     box-sizing: border-box;
   }
   

@@ -32,6 +32,7 @@
 @import url(../blocks/card-template/__card/card.css);
 @import url(../blocks/card-template/__image/card__image.css);
 @import url(../blocks/card-template/__conteiner/card__conteiner.css);
+@import url(../blocks/popup-image/__photo/popup-image__photo.css);
 @import url(../blocks/card-template/__title/card__title.css);
 @import url(../blocks/card-template/__group/card__group.css);
 @import url(../blocks/card-template/__group/_active/element__group_active.css);
