@@ -1,16 +1,18 @@
 .popup-image__title {
-        font-family: 'Inter', 'Arial', 'Helvetica';
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        color: rgba(255, 255, 255, 1);
-        margin: 0;
-        max-width: 291px;
-        padding-top: 5px;
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+    max-width: 291px;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .popup-image__title {
+        max-width: 240px;
+        padding-left: 30px;
+        padding-top: 10px;
     }
-    
-    @media screen and (max-width: 600px) {
-        .popup-image__title {
-            max-width: 240px;
-        }
-    }
+}

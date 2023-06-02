@@ -19,7 +19,6 @@ editForm.addEventListener('submit', function (event) {
     event.preventDefault();
     profileTitle.textContent = nameInput.value;
     profileSubtitle.textContent = professionInput.value;
-
     closePopup(editPopup);
 });
 
@@ -51,7 +50,6 @@ openPopupCardButton.addEventListener('click', function () {
 });
 
 closePopupCardButton.addEventListener('click', function () {
-
     closePopup(addPopup);
 });
 
@@ -97,22 +95,23 @@ function createCard(name, link) {
 
     const text = newCard.querySelector('.card__title');
     const image = newCard.querySelector('.card__image');
+    image.alt = name;
     text.textContent = name;
     image.src = link;
 
     const deleteButtom = newCard.querySelector('.card__del');
-    deleteButtom.addEventListener('click', function(event){
+    deleteButtom.addEventListener('click', function (event) {
         template.removeChild(newCard);
-    }); 
+    });
 
     const likeButtom = newCard.querySelector('.card__group');
     likeButtom.addEventListener('click', function (evt) {
         evt.target.classList.toggle('card__group_active');
-    }); 
+    });
 
     image.addEventListener('click', function () {
         openPopup(popupImage);
-        popupImagePhoto.src = link; 
+        popupImagePhoto.src = link;
         popupImageTitle.textContent = name;
 
     });
@@ -137,8 +136,6 @@ addForm.addEventListener('submit', function (event) {
     form.reset();
     closePopup(addPopup);
 });
-
-////открытие фото
 
 const popupImage = document.querySelector('.popup-image');
 const popupImageCloseButton = document.querySelector('.popup-image__close-button');

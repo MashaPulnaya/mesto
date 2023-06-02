@@ -4,3 +4,20 @@
     height: 540px;
     margin: auto;
 }
+
+@media screen and (max-width: 930px) {
+    .popup-image__photo {
+        max-width: 500px;
+        min-width: 433px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .popup-image__photo {
+        max-width: 245px;
+        min-width: 240px;
+        height: 299px;
+        margin: auto;
+    }
+}
