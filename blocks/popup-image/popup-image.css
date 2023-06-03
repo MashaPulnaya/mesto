@@ -1,5 +1,5 @@
 .popup-image {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 1);
@@ -8,15 +8,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-}
-
-.popup-image>.popup-image__container {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-}
-
-.popup-image:hover>.popup-image__container {
-    visibility: visible;
-    opacity: 1;
+    z-index: 1;
 }

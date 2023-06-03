@@ -25,13 +25,16 @@
             </div>
             <button type="button" class="profile__add-button"></button>
         </section>
+        <section class="elements">
+        </section>
     </main>
-    <div class="popup">
+    <div class="popup popup_edit_form">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
-            <form name="form1" class="popup__form">
-                <input name="name" type="text" class="popup__input popup__input_type_name" />
-                <input name="job" type="text" class="popup__input popup__input_type_job" />
+            <form name="edit-form" class="popup__form">
+                <input name="name" placeholder="Имя" type="text" class="popup__input popup__input_type_name" required>
+                <input name="job" placeholder="Профессия" type="text" class="popup__input popup__input_type_job"
+                    required>
                 <button type="submit" class="popup__button">Сохранить</button>
             </form>
             <button type="button" class="popup__close-button"></button>
@@ -40,22 +43,21 @@
     <div class="popup popup_card_image">
         <div class="popup__container">
             <h2 class="popup__title">Новое&nbsp;место</h2>
-            <form name="form2" class="popup__form popup__form_type_card">
-                <input name="name-card" type="text" value="Название" class="popup__input popup__input_type_title" />
-                <input name="name-image" type="text" value="Ссылка на картинку"
-                    class="popup__input popup__input_type_image" />
+            <form name="add-form" class="popup__form popup__form_type_card">
+                <input name="name-card" type="text" placeholder="Название" class="popup__input popup__input_type_title"
+                    required>
+                <input name="name-image" type="url" placeholder="Ссылка на картинку"
+                    class="popup__input popup__input_type_image" required>
                 <button type="submit" class="popup__button popup__button_type_card">Создать</button>
             </form>
             <button type="button" class="popup__close-button popup__close-button_card_image"></button>
         </div>
     </div>
-    <div class="popup-image">
+    <div class="popup popup-image">
         <div class="popup-image__container">
-            <form name="form3" class="popup-image__form">
-                <button type="button" class="popup-image__close-button"></button>
-                <img src="#" class="popup-image__photo" alt="картинка">
-                <h2 class="popup-image__title"></h2>
-            </form>
+            <img src="#" class="popup-image__photo" alt="картинка">
+            <button type="button" class="popup__close-button popup-image__close-button"></button>
+            <h2 class="popup-image__title"></h2>
         </div>
     </div>
 
