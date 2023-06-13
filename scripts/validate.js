@@ -1,10 +1,42 @@
-const form = document.forms.editForm;
+const showInputError = (formElement, inputElement, errorMessage) => {
+    const formError = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.add('popup__input_type_error');
+  formError.textContent = errorMessage;
+  formError.classList.add('popup__input-error_active');
+};
 
-const className = {
-    inputsConteiner: 'popup__container',
-    input: 'popup__input',
-    inputInvalid: 'form__input_invalid',
-    error: 'form__error'
-}
+const hideInputError = (formElement, inputElement) => {
+    const formError = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.remove('popup__input_type_error');
+  formError.classList.remove('popup__input-error_active');
+  formError.textContent = '';
+};
 
-console.log(className);
+const checkInputValidity = (formElement, inputElement) => {
+  if (!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, inputElement.validationMessage);
+  } else {
+    hideInputError(formElement, inputElement);
+  }
+};
+
+const setEventListeners = (formElement) => {
+  const inputList = Array.from(formElement.querySelectorAll('.popup__input'));
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener('input', function () {
+      checkInputValidity(formElement, inputElement);
+    });
+  });
+};
+
+const enableValidation = () => {
+  const formList = Array.from(document.querySelectorAll('.popup__form'));
+  formList.forEach((formElement) => {
+    formElement.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+    });
+    setEventListeners(formElement);
+  });
+};
+
+enableValidation();
