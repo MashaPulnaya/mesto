@@ -2,7 +2,6 @@
     font-size: 12px;
     color: red;
     opacity: 0;
-    top: calc(39% + 6px);
-    left: 35px;
+    margin-top: -10px;
     transition: 0.3s;
 }
