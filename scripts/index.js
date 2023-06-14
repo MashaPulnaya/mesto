@@ -17,6 +17,12 @@ closeEditPopupButton.addEventListener('click', function () {
     closePopup(editPopup);
 });
 
+closeEditPopupButton.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+    closePopup(editPopup);
+}
+});
+
 editForm.addEventListener('submit', function (event) {
     event.preventDefault();
     profileTitle.textContent = nameInput.value;
