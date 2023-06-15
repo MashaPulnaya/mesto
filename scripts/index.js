@@ -17,12 +17,6 @@ closeEditPopupButton.addEventListener('click', function () {
     closePopup(editPopup);
 });
 
-closeEditPopupButton.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-    closePopup(editPopup);
-}
-});
-
 editForm.addEventListener('submit', function (event) {
     event.preventDefault();
     profileTitle.textContent = nameInput.value;
@@ -151,6 +145,26 @@ const popupImageCloseButton = document.querySelector('.popup-image__close-button
 popupImageCloseButton.addEventListener('click', function () {
     closePopup(popupImage);
 });
+
+
+const Popups = document.querySelectorAll('.popup');
+
+Popups.forEach((popup) => {
+    document.addEventListener('keydown', function(evt) {
+    if (evt.key === 'Escape') {
+        closePopup(popup);
+    }
+});
+});
+
+Popups.forEach((popup) => {
+    popup.addEventListener('click', function(evt) {
+        if (evt.target === popup || !popup.contains(evt.target)) {
+            closePopup(popup);
+        }
+    });
+});
+
 
 
 
