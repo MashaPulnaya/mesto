@@ -43,6 +43,7 @@ const imageInput = document.querySelector('.popup__input_type_image');
 const addForm = document.querySelector('.popup__form_type_card');
 const popupImagePhoto = document.querySelector('.popup-image__photo');
 const popupImageTitle = document.querySelector('.popup-image__title');
+const popupButton = addForm.querySelector('.popup__button');
 
 
 openPopupCardButton.addEventListener('click', function () {
@@ -138,6 +139,8 @@ addForm.addEventListener('submit', function (event) {
 
     form.reset();
     closePopup(addPopup);
+    popupButton.classList.add('popup__button_inactive');
+    popupButton.setAttribute('disabled', 'disabled');
 });
 
 const popupImage = document.querySelector('.popup-image');
@@ -150,15 +153,15 @@ popupImageCloseButton.addEventListener('click', function () {
 const Popups = document.querySelectorAll('.popup');
 
 Popups.forEach((popup) => {
-    document.addEventListener('keydown', function(evt) {
-    if (evt.key === 'Escape') {
-        closePopup(popup);
-    }
-});
+    document.addEventListener('keydown', function (evt) {
+        if (evt.key === 'Escape') {
+            closePopup(popup);
+        }
+    });
 });
 
 Popups.forEach((popup) => {
-    popup.addEventListener('click', function(evt) {
+    popup.addEventListener('click', function (evt) {
         if (evt.target === popup || !popup.contains(evt.target)) {
             closePopup(popup);
         }
