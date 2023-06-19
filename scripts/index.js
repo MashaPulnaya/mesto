@@ -26,10 +26,12 @@ editForm.addEventListener('submit', function (event) {
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closeByEscape);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closeByEscape);
 }
 
 //// второй попап
@@ -149,27 +151,22 @@ popupImageCloseButton.addEventListener('click', function () {
     closePopup(popupImage);
 });
 
+function closeByEscape(evt) {
+    if (evt.key === 'Escape') {
+      const openedPopup = document.querySelector('.popup_opened');
+      closePopup(openedPopup);
+    };
+  };
 
-const Popups = document.querySelectorAll('.popup');
-
-Popups.forEach((popup) => {
-    document.addEventListener('keydown', function (evt) {
-        if (evt.key === 'Escape') {
-            closePopup(popup);
-        }
-    });
-});
-
-Popups.forEach((popup) => {
-    popup.addEventListener('click', function (evt) {
-        if (evt.target === popup || !popup.contains(evt.target)) {
-            closePopup(popup);
-        }
-    });
-});
-
-
-
+  const allPopups = document.querySelectorAll('.popup');
+  
+  allPopups.forEach((popup) => {
+      popup.addEventListener('click', function (evt) {
+          if (evt.target === popup || !popup.contains(evt.target)) {
+              closePopup(popup);
+          }
+      });
+  });
 
 
 
