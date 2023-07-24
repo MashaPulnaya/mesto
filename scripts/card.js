@@ -1,59 +1,24 @@
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
+import { _handleOpenPopup, _handleClosePopup, _closeByEscape } from './utils.js';
 
-const popupElement = document.querySelector('.popup-image');
-const popupImage = document.querySelector('.popup-image__photo');
-const popupCloseButton = document.querySelector('.popup-image__close-button');
+const popupImage = document.querySelector('.popup-image');
+const popupImagePhoto = document.querySelector('.popup-image__photo');
+const popupImageCloseButton = document.querySelector('.popup-image__close-button');
 
 export class Card {
-  constructor(name, link) {
-    this._name = name;
-    this._link = link;
-
+  constructor(data, templateSelector) {
+    this._name = data.name;
+    this._link = data.link;
+    this._templateSelector = '.card-template';
   }
 
   _getTemplate() {
     const cardElement = document
-      .querySelector('.card-template')
+      .querySelector(this._templateSelector)
       .content
       .querySelector('.card')
       .cloneNode(true);
 
     return cardElement;
-  }
-
-  _handleOpenPopup() {
-    popupImage.src = this._link;
-    popupElement.classList.add('popup_opened');
-  }
-
-  _handleClosePopup() {
-    popupImage.src = '';
-    popupElement.classList.remove('popup_opened');
   }
 
   _handleDeleteClick() {
@@ -64,15 +29,31 @@ export class Card {
     this._element.querySelector('.card__group').classList.toggle('card__group_active');
   }
 
+  _handleOpenPopup() {
+    _handleOpenPopup(popupImagePhoto, this._link, popupImage);
+  }
+
+  _handleClosePopup() {
+    this._handleClosePopup(popupImagePhoto, popupImage);
+  }
+
+  _closeByEscape(event) {
+    _handleClosePopup(popupImagePhoto, popupImage);
+  }
+
+
   _setEventListeners() {
 
     this._element.querySelector('.card__image').addEventListener('click', () => {
       this._handleOpenPopup();
     });
 
+    popupImageCloseButton.addEventListener('click', () => {
+      _handleClosePopup(popupImagePhoto, popupImage);
+    });
 
-    popupCloseButton.addEventListener('click', () => {
-      this._handleClosePopup();
+    document.addEventListener('keydown', (event) => {
+      this._closeByEscape(event);
     });
 
     this._element.querySelector('.card__del').addEventListener('click', () => {
@@ -85,7 +66,6 @@ export class Card {
 
   }
 
-
   generateCard() {
     this._element = this._getTemplate();
     this._setEventListeners();
@@ -97,12 +77,5 @@ export class Card {
   }
 
 }
-
-initialCards.forEach((item) => {
-  const card = new Card(item.name, item.link);
-  const cardElement = card.generateCard();
-
-  document.querySelector('.elements').append(cardElement);
-});
 
 
